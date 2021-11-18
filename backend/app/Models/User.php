@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
 
-    protected $table= 'users'
+    protected $table= 'users';
     // use HasApiTokens, Notifiable;
 
     /**
@@ -22,7 +22,6 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
-        'password',
         'phone'
     ];
 
