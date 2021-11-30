@@ -10,7 +10,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-
+    use HasFactory;
     protected $table= 'users';
     // use HasApiTokens, Notifiable;
 
@@ -22,12 +22,12 @@ class User extends Authenticatable
 
     protected $guarded = [];
 
-    // protected $fillable = [
-    //     'name',
-    //     'email',
-    //     'phone',
-    //     'cpf'
-    // ];
+    protected $fillable = [
+        'name',
+        'email',
+        'phone',
+        'cpf'
+    ];
 
     /**
      * The attributes that should be hidden for serialization.
@@ -38,14 +38,14 @@ class User extends Authenticatable
         'password' 
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // /**
+    //  * The attributes that should be cast.
+    //  *
+    //  * @var array
+    //  */
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
 
     public function setPasswordAttribute($password)
     {
