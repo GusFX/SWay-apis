@@ -27,6 +27,7 @@ class UserController extends Controller
 
         Auth::login($user);
 
-        //redirecionar para o menu principal(mapa)
+        return response('User created', 200)
+        ->header('Content-Type', 'text/plain');
     }
 }
