@@ -25,8 +25,6 @@ class UserController extends Controller
 
         $user = User::create($attributes);
 
-        // Auth::login($user);
-
         return response($user, 200);
     }
 }
