@@ -22,7 +22,7 @@ class CreateOccurrencesTable extends Migration
             $table->string('postal_code');
             $table->datetime('date_hour');
             $table->string('description');
-            $table->enum('type', ['theft','burglary','robbery','rape','harassment','strange_behaviour','drug trafficking','faction_zone','other']);
+            $table->enum('type', ['theft','burglary','robbery','rape','harassment','strange_behaviour','drug_trafficking','faction_zone','other']);
             $table->bigInteger('user_id')->unsigned()->index()->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');;
             $table->timestamps();
