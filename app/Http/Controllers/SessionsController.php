@@ -8,10 +8,10 @@ use app/Models/User;
 class SessionsController extends Controller
 {
 
-    // public function create()
-    // {
-    //     //acess the login page
-    // }
+    public function create()
+    {
+        //acess the login page
+    }
 
     public function store()
     {
