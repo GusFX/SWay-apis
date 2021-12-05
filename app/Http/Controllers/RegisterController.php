@@ -3,23 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app/Models/User;
+use app\Models\User;
 
 class RegisterController extends Controller
 {
     public function create()
     {
-        //parte do front 
+        //parte do front
     }
 
     public function store()
     {
         $attributes = request()->validate([
-            'name' = 'required|max:255',
-            'email' = 'required|email',
-            'password' = 'required|min:8|max:255',
-            'phone' = 'required|min:11',
-            'cpf' = 'required'
+            'name' => 'required|max:255',
+            'email' => 'required|email',
+            'password' => 'required|min:8|max:255',
+            'phone' => 'required|min:11',
+            'cpf' => 'required'
 
         ]);
 
