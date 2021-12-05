@@ -25,9 +25,8 @@ class UserController extends Controller
 
         $user = User::create($attributes);
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        return response('User created', 200)
-        ->header('Content-Type', 'text/plain');
+        return response($user, 200);
     }
 }
