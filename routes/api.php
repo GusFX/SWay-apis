@@ -23,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/users', [UserController::class, 'index']);
 Route::post('/user', [UserController::class, 'store']);
 
-Route::post('/occurrence', [OccurenceController::class,'store']);
-Route::get('/occurrences', [OccurenceController::class,'index']);
+Route::post('/occurrence', [OccurrenceController::class,'store']);
+Route::get('/occurrences', [OccurrenceController::class,'index']);
 // Route::post('/login', [SessionsController::class, 'store'])->middleware('guest');
 // Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
