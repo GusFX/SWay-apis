@@ -12,9 +12,9 @@ class UserController extends Controller
         return User::get();
     }
 
-    public function store()
+    public function store(Request $request)
     {
-        $attributes = request()->validate([
+        $attributes = $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|email',
             'password' => 'required|min:8|max:255',
@@ -24,7 +24,6 @@ class UserController extends Controller
         ]);
 
         $user = User::create($attributes);
-
-        return response($user, 404);
+        return response($user, 200);
     }
 }

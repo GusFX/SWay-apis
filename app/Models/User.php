@@ -26,7 +26,8 @@ class User extends Authenticatable
         'name',
         'email',
         'phone',
-        'cpf'
+        'cpf',
+        'password'
     ];
 
     /**
@@ -34,21 +35,21 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password' 
-    ];
-
-    // /**
-    //  * The attributes that should be cast.
-    //  *
-    //  * @var array
-    //  */
-    // protected $casts = [
-    //     'email_verified_at' => 'datetime',
+    // protected $hidden = [
+    //     'password' 
     // ];
 
-    public function setPasswordAttribute($password)
-    {
-        $this->attributes['password'] = bcrypt($password);
-    }
+    // // /**
+    // //  * The attributes that should be cast.
+    // //  *
+    // //  * @var array
+    // //  */
+    // // protected $casts = [
+    // //     'email_verified_at' => 'datetime',
+    // // ];
+
+    // public function setPasswordAttribute($password)
+    // {
+    //     $this->attributes['password'] = bcrypt($password);
+    // }
 }

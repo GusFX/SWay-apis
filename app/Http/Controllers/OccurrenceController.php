@@ -8,9 +8,12 @@ use App\Models\Occurrence;
 class OccurenceController extends Controller
 {
 
-    public function store()
+    public function index(){
+        return Occurrence::all();
+    }
+    public function store(Request $request)
     {   
-        $attributes = request()->validate([
+        $attributes = $request->validate([
             'lat' => 'required',
             'long' => 'required',
             'neighbourhood' => 'required',
@@ -21,7 +24,8 @@ class OccurenceController extends Controller
             'type' => 'required'
         ]);
 
-        Occurrence::create($attributes);
+        $occurrence =  Occurrence::create($attributes);
+        return response($occurrence, 200);
     }
 
     //redirect to map
