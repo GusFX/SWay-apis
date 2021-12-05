@@ -19,9 +19,10 @@ class OccurrenceController extends Controller
             'neighbourhood' => 'required',
             'street' => 'required',
             'postal_code' => 'required',
-            'data_hour' => 'required',
+            'date_hour' => 'required',
             'description' => 'required',
-            'type' => 'required'
+            'type' => 'required',
+            'user_id' => 'required'
         ]);
 
         $occurrence =  Occurrence::create($attributes);
