@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Occurrence;
 
-class OccurenceController extends Controller
+class OccurrenceController extends Controller
 {
 
     public function index(){
