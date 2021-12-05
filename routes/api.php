@@ -22,11 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/users', [UserController::class, 'index']);
 
-Route::get('register', [RegisterController::class, 'create'])->middleware('guest');
-Route::post('registerUser', [RegisterController::class, 'store'])->middleware('guest');
+Route::post('/user', [UserController::class, 'store'])->middleware('guest');
 
-Route::get('login', [SessionsController::class, 'create'])->middleware('guest');
-Route::post('login', [SessionsController::class, 'store'])->middleware('guest');
-Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth');
+Route::post('/login', [SessionsController::class, 'store'])->middleware('guest');
+Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth');
 
-Route::post('createOccurence', [OccurenceController::class,'store'])->middleware('auth');
+Route::post('/occurrence', [OccurenceController::class,'store'])->middleware('auth');
